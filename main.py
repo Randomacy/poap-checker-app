@@ -4,6 +4,8 @@ import numpy as np
 from io import StringIO
 import requests
 
+# Declare variables
+
 # Show title of the app
 st.title('POAP Link Checker')
 
@@ -17,9 +19,11 @@ if uploaded_file:
     lines = stringio.readlines()
     lines = [line.strip() for line in lines]
 
-    st.write("File uploaded! You have", len(lines), "POAPs. Continue further or remove the file by pressing the X key.")
-
-st.divider()
+    st.write("File uploaded! You have", len(lines), "POAPs")
+    st.write("Continue further or remove the file by pressing the X key.")
 
 if uploaded_file:
-    st.button("Check my POAPs' validity!")
+    if st.button("Check my POAPs' validity!"):
+        print("Hello")
+    else:
+        print("Validity Check Ready")
